@@ -3,16 +3,38 @@ __pycache__/
 *.pyc
 *.pyo
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pytype/
 .venv/
 venv/
 env/
 *.egg-info/
 .coverage
+.coverage.*
 htmlcov/
+
+# Secrets / local config
+.env
+.env.*
+*.env
+*.local
+config.local.yml
+config.local.yaml
+
+# Logs / runtime artifacts
+*.log
+logs/
+*.pid
 
 # Database
 *.db
 soko_bora.db
+
+# Packaging / build
+build/
+dist/
+site/
 
 # Editor / OS
 .vscode/
