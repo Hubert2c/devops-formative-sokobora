@@ -98,3 +98,23 @@ def test_list_prices_filtered_by_region(client):
     data = response.get_json()
     assert len(data) == 1
     assert data[0]["region"] == "Kigali"
+
+
+def test_list_prices_filtered_by_crop_name(client):
+    client.post("/api/prices", json={
+        "crop_name": "Beans",
+        "market_name": "Nyabugogo Market",
+        "region": "Kigali",
+        "price_per_kg": 800,
+    })
+    client.post("/api/prices", json={
+        "crop_name": "Maize",
+        "market_name": "Musanze Market",
+        "region": "Musanze",
+        "price_per_kg": 300,
+    })
+
+    response = client.get("/api/prices?crop_name=Beans")
+    data = response.get_json()
+    assert len(data) == 1
+    assert data[0]["crop_name"] == "Beans"
