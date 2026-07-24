@@ -66,6 +66,15 @@ pip install -r requirements-dev.txt
 python app/main.py
 ```
 
+On Windows PowerShell, use:
+
+```powershell
+py -m venv venv
+.\venv\Scripts\Activate.ps1
+python -m pip install -r requirements-dev.txt
+python app/main.py
+```
+
 The API will be available at `http://localhost:5000`.
 
 ### Example usage
@@ -92,8 +101,17 @@ flake8 app tests --max-line-length=100
 
 ## Team
 
-*(Add team member names and roles here — e.g. Backend Lead, DevOps Lead,
-Frontend Lead, QA/Docs Lead — per the group assessment requirement.)*
+Add your team member names, roles, and participation notes here before
+submission. A simple format that works well for the assignment is:
+
+| Name | Role | Contribution |
+| --- | --- | --- |
+| Team member 1 | Backend Lead | Implemented the Flask API and core price reporting feature |
+| Team member 2 | DevOps Lead | Managed the repo setup, `.gitignore`, and branch protection |
+| Team member 3 | QA / Docs Lead | Wrote tests, README setup notes, and board items |
+| Team member 4 | Frontend / Product Lead | Refined the project scope and user stories |
+
+Update the table with your real group members before you submit the repo.
 
 ## Project Board
 
@@ -101,3 +119,14 @@ See the GitHub Projects Kanban board linked in the repository description
 for the current backlog, in-progress work, and completed items. See
 `PROJECT_BOARD.md` in this repo for the initial backlog content used to
 seed that board.
+
+## Submission Checklist
+
+- Add the final team member names and roles in the table above.
+- Make sure the GitHub Projects board has at least 8-10 items and uses
+  Backlog, In Progress, and Done columns.
+- Confirm branch protection is enabled on `main` in GitHub settings.
+- Add the repository URL and team participation sheet to the Canvas
+  submission.
+
+Munezero Hubert
